@@ -9,9 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.myp.cloud</groupId>
-    <artifactId>eureka-client-common</artifactId>
+    <artifactId>eureka-client-admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eureka-client-common</name>
+    <packaging>war</packaging>
+    <name>eureka-client-admin</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -26,9 +27,11 @@
             <artifactId>pojo</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <groupId>com.myp.cloud</groupId>
+            <artifactId>feign-common-interface</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -46,13 +49,16 @@
             <artifactId>gson</artifactId>
         </dependency>
 
-        <!--lombok-->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.2</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
